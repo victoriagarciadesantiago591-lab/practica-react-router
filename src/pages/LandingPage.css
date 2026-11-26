@@ -1,0 +1,232 @@
+.findit-home {
+  --fi-ink: #142b45;
+  --fi-teal: #08766e;
+  --fi-mint: #85e5cd;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: var(--fi-ink);
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f2f7f6;
+  background-image: radial-gradient(#cbdad7 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.fi-header,
+.fi-main,
+.fi-footer {
+  width: min(1080px, 90%);
+  margin-inline: auto;
+}
+
+.fi-header,
+.fi-footer,
+.fi-nav,
+.fi-footer nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.fi-header,
+.fi-footer {
+  justify-content: space-between;
+  padding-block: 24px;
+}
+
+.fi-logo {
+  color: var(--fi-ink);
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -2px;
+  text-decoration: none;
+}
+
+.fi-logo span,
+.fi-welcome h1 span {
+  color: var(--fi-teal);
+}
+
+.fi-nav a,
+.fi-footer a {
+  color: var(--fi-ink);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.fi-nav a:hover,
+.fi-footer a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.fi-nav-login {
+  padding: 9px 16px;
+  border: 1px solid #9aafac;
+  border-radius: 9px;
+  background: white;
+}
+
+.fi-main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1.45fr 1fr;
+  align-content: center;
+  gap: 20px;
+  padding-block: 32px 48px;
+}
+
+.fi-welcome,
+.fi-access {
+  border-radius: 22px;
+  box-shadow: 0 12px 32px rgb(20 43 69 / 8%);
+}
+
+.fi-welcome {
+  position: relative;
+  padding: clamp(34px, 5vw, 68px);
+  border: 1px solid #d1dfdc;
+  background: white;
+}
+
+/* Las dos esquinas forman el marco del visor. */
+.fi-welcome::before,
+.fi-welcome::after {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  border: solid #50bca6;
+  pointer-events: none;
+}
+
+.fi-welcome::before {
+  top: 16px;
+  left: 16px;
+  border-width: 3px 0 0 3px;
+  border-radius: 7px 0 0;
+}
+
+.fi-welcome::after {
+  right: 16px;
+  bottom: 16px;
+  border-width: 0 3px 3px 0;
+  border-radius: 0 0 7px;
+}
+
+.fi-school {
+  margin: 0 0 24px;
+  color: var(--fi-teal);
+  font-weight: 700;
+}
+
+.fi-welcome h1 {
+  margin: 0;
+  font-size: clamp(32px, 4vw, 54px);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+
+.fi-welcome h1 strong {
+  display: block;
+  font-size: 1.5em;
+  font-weight: 800;
+}
+
+.fi-intro {
+  max-width: 38ch;
+  margin: 20px 0 28px;
+  color: #4c6270;
+  line-height: 1.65;
+}
+
+.fi-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  padding: 13px 20px;
+  border-radius: 10px;
+  background: var(--fi-teal);
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.fi-button:hover {
+  background: #065f59;
+}
+
+.fi-access {
+  display: grid;
+  align-content: center;
+  gap: 14px;
+  background: var(--fi-ink);
+  padding: clamp(24px, 3vw, 40px);
+  color: white;
+}
+
+.fi-access h2 {
+  margin: 0 0 8px;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.fi-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px;
+  border: 1px solid #486078;
+  border-radius: 14px;
+  background: #203b55;
+  color: white;
+  text-decoration: none;
+}
+
+.fi-card:hover {
+  background: #294862;
+  border-color: var(--fi-mint);
+}
+
+.fi-card strong,
+.fi-card small {
+  display: block;
+}
+
+.fi-card small {
+  margin-top: 5px;
+  color: #d1dfe8;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.fi-arrow {
+  color: var(--fi-mint);
+  font-size: 24px;
+}
+
+.fi-footer {
+  border-top: 1px solid #c4d5d1;
+  color: #4c6270;
+  font-size: 14px;
+}
+
+.findit-home a:focus-visible {
+  outline: 3px solid #dd8515;
+  outline-offset: 4px;
+}
+
+@media (max-width: 740px) {
+  .fi-main {
+    grid-template-columns: 1fr;
+    padding-block: 16px 32px;
+  }
+
+  .fi-header,
+  .fi-nav {
+    gap: 12px;
+  }
+}
